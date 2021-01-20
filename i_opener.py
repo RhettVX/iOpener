@@ -332,8 +332,5 @@ class iOpenerCommand(sublime_plugin.WindowCommand):
     input_panel  = None
 
     def run(self):
-        if not (is_sublime_text_2() or is_sublime_text_3()):
-            print("iOpener plugin is only for Sublime Text v2 and v3.")
-        else:
-            load_settings()
-            iOpenerCommand.input_panel = iOpenerPathInput()
+        load_settings()
+        iOpenerCommand.input_panel = iOpenerPathInput()
